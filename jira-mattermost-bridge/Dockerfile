@@ -6,7 +6,7 @@ LABEL version="1.0.0"
 ENV MATTERMOST_SERVER_PORT  443
 ENV MATTERMOST_SERVER_PATH  /hooks/
 ENV MATTERMOST_SERVER_PROTO		https
-ENV MATTERMOST_SERVER   		matter.gridsum.com
+ENV MATTERMOST_SERVER   		localhost
 
 RUN	apk update && apk add tzdata \
     	 git \
