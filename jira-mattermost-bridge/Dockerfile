@@ -22,5 +22,5 @@ EXPOSE 3000
 
 WORKDIR /usr/local/jira-matter-bridge
 
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
 
