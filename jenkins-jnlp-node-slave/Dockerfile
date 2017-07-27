@@ -1,4 +1,4 @@
-FROM jenkinsci/jnlp-slave:2.62-alpine
+FROM jenkinsci/slave:2.62-alpine
 MAINTAINER Qiusheng Zhang <zhangqiusheng@dongqiudi.com>
 
 ENV NPM_CONFIG_LOGLEVEL info
@@ -66,5 +66,10 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
   && apk del .build-deps-yarn
-  
+
 USER jenkins
+
+COPY jenkins-slave /usr/local/bin/jenkins-slave
+
+ENTRYPOINT ["jenkins-slave"]
+
