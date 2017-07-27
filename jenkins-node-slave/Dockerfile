@@ -1,4 +1,4 @@
-FROM jenkinsci/slave:2.62-alpine
+FROM jenkinsci/jnlp-slave:2.62-alpine
 MAINTAINER Qiusheng Zhang <zhangqiusheng@dongqiudi.com>
 
 ENV NPM_CONFIG_LOGLEVEL info
