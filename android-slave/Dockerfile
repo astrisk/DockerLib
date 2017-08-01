@@ -25,9 +25,6 @@ RUN cd /usr/lib/ && \
     apk update
 
 USER jenkins
-RUN mkdir /home/jenkins/.jenkins
-VOLUME /home/jenkins/.jenkins
-RUN mkdir /home/jenkins/.gradle
 
 ENV GRADLE_USER_HOME /home/jenkins/.gradle
 VOLUME /home/jenkins/.gradle
