@@ -24,6 +24,8 @@ RUN cd /usr/lib/ && \
     rm android-sdk_r24.0.1-linux.tgz && \
     apk update
 
+ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
 USER jenkins
 
 ENV GRADLE_USER_HOME /home/jenkins/.gradle
